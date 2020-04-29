@@ -9,8 +9,9 @@
 def selects_the_titles_of_all_projects_and_their_pledge_amounts_alphabetized_by_title
   SELECT projects.titles, pledges.amount 
   FROM projects
-  INNER JOIN projects
-  ON projects.id = 
+  INNER JOIN pledges
+  ON projects.id = project.id 
+  ORDER by titles;
   
 end
 
